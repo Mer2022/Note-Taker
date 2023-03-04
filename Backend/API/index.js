@@ -10,7 +10,7 @@ router.get("/notes", (req, res) => {
   });
 
   router.post("/notes", ({body}, res) => {
-    req.body.id = uuidv4();
+    body.id = uuidv4();
    console.log( body)
     const newNote = createNewNote(body,notes);
     res.json(newNote);
